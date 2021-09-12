@@ -1,184 +1,31 @@
-import * as React from "react"
+> # 那些最无聊的事情，才是最值得怀念的👋
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
+<img align="right" alt="GIF" src="https://raw.githubusercontent.com/JoeyBling/JoeyBling/master/pic/pusheencode.gif" />
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
+> ### I'm Pomelo
+> * 广东某个学院大数据专业大一学渣 穷究于理，成就于工
+> * ⚡ `CTFer` && `安全开发` && `大数据分析`
+> * 💬扣扣邮箱，欢迎一起讨论学习：[912616606@qq.com](mailto:912616606@qq.com)
+> * ⭐个人博客：[兔兔那么可爱](http://silvercrow.ltd//)
+> * 微信公众号：`柚子科技工作室`
+> * 理工酸菜鱼 清远黄焖鸡
+> * 做自己爱做的事，照顾兔兔一辈子
+> 
+> ### 🛠技术栈 | Tech Stack
+> * 💻  ![Python](https://camo.githubusercontent.com/021899bb137367b4663ff8f005218e99337848d6c6d3d835048ebaa8af4c1714/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f707974686f6e2d332d626c7565)  ![PHP](https://camo.githubusercontent.com/e6f6bd23dffc40bb9c321daa8bbad319ec3c54bb9ac9378025535e1dc4b89130/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5048502d322d627269676874677265656e) ![Java](https://camo.githubusercontent.com/8084c05ea61084a30448c5b8f581d0389c7ab4fbf46593e3499e59809b2c6395/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4a6176612d3333333333333f7374796c653d666c6174266c6f676f3d4a617661266c6f676f436f6c6f723d303037333936) ![Linux](https://camo.githubusercontent.com/e9da2a14c7b3f9cf9792e943d2a39fd0747cf8d940f640b9b1ae5e66868d7011/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4c696e75782d3333333333333f7374796c653d666c6174266c6f676f3d4c696e7578266c6f676f436f6c6f723d464343363234) ![Shell](https://camo.githubusercontent.com/f25ede3948c3fe2d3492cb09bb9508180eccd10b8e04f07e2c8491e65ba23268/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f426173682d5368656c6c2d6c6967687467726579)
+> * 🌐   ![HTML5](https://camo.githubusercontent.com/b1720e127ee280daab63f84b508b29abe2540b02f5f57675765ad07da1315241/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d48544d4c352d3333333333333f7374796c653d666c6174266c6f676f3d48544d4c35)
+> * 🛢   ![MySQL](https://camo.githubusercontent.com/bd16a09c0ea9b0b7ee8766d187db73f61d5ec35a3c5499119b4d3003c1ee546a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4d7953514c2d3333333333333f7374796c653d666c6174266c6f676f3d6d7973716c) ![Redis](https://camo.githubusercontent.com/818bc92eac45803f5cca39e80223ae4a3c5f5e6fdd212771cfd830abc16e8090/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656469732d332d726564)
+> * 🔧 ![Git](https://camo.githubusercontent.com/3ea1c940cc08da19f16d17ca0c4704397dac1f12a1bb73f1174ae504c3e80a85/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4769742d3333333333333f7374796c653d666c6174266c6f676f3d676974) ![GitHub](https://camo.githubusercontent.com/544426317a6c6226b7f6b3367232378ea367aa5001a41da4f302a77f9959909f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4769744875622d3333333333333f7374796c653d666c6174266c6f676f3d676974687562) ![Markdown](https://camo.githubusercontent.com/cc37a8be0aeac01251fe533495a2b7f376eebbcc9017ebead3fed8121de5de43/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4d61726b646f776e2d3333333333333f7374796c653d666c6174266c6f676f3d6d61726b646f776e)
+> * ...
+> 
+> ### 开源项目
+> * 正在研究....
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
-
-// markup
-const IndexPage = () => {
-  return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
-  )
-}
-
-export default IndexPage
+> ### 正在做的事
+> `网站搭建` && `信息安全比赛` && `学习Python`
+> 
+> ![Anurag's github stats](https://camo.githubusercontent.com/b547b7e86ab3f24f3d0e28374119b2b6b4087fe2ac17c133f8ca361599bf2a65/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d47726170656672756974546563686e6f6c6f67792673686f775f69636f6e733d74727565267468656d653d7261646963616c)
+> 
+> > _**做技术的黑客心态加上开放共进的态度是成长和越过高山幽谷的秘籍😊**_
+> 
+> ⭐️ From [Pomelo](https://github.com/GrapefruitTechnology)
